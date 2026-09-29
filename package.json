@@ -9,9 +9,16 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./dist/index.js
+    "start": "tsc && node ./dist/index.js"
   },
-  "keywords": ["ai", "copilot", "testing", "guardrails", "security", "git"],
+  "keywords": [
+    "ai",
+    "copilot",
+    "testing",
+    "guardrails",
+    "security",
+    "git"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
