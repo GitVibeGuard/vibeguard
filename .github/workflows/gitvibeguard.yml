@@ -1,0 +1,32 @@
+name: 🛡️ GitVibeGuard Security Sandbox
+
+on:
+  pull_request:
+    branches: [ main, master ]
+  push:
+    branches: [ main, master ]
+
+jobs:
+  guard-sandbox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js Environment
+        uses: actions/with-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install Project Dependencies
+        run: npm ci
+
+      - name: 🏗️ Compile TypeScript Engine
+        run: npm run build
+
+      - name: 🔍 Run GitVibeGuard Deterministic Scan
+        run: node ./dist/index.js check
