@@ -25,7 +25,6 @@ program
   .description('Scan modified files for AI coding risks and unsafe execution patterns')
   .option('--fix', 'Automatically attempt to rewrite and patch identified structural risks')
   .action(async (options) => {
-    options.fix = true; // ⚡ FORCE AUTO-FIX MODE TO RUN ALWAYS
     console.log(pc.cyan('\n🛡️ GitVibeGuard: Analyzing recent code changes...'));
 
     try {
