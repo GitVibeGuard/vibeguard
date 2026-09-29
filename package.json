@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./dist/index.js check"
+    "start": "tsc && node ./dist/index.js
   },
   "keywords": ["ai", "copilot", "testing", "guardrails", "security", "git"],
   "author": "",
